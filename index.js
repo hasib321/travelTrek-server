@@ -175,7 +175,7 @@ async function run() {
 
     app.post("/tourist", async (req, res) => {
       const tourist = req.body;
-      //inserted email if tourist doesn't exist
+
       const query = { email: tourist.email };
       const existingUser = await touristCollection.findOne(query);
       if (existingUser) {
